@@ -1,4 +1,4 @@
-package two.sum;
+package two_sum;
 
 // http://www.programcreek.com/2012/12/leetcode-solution-of-two-sum-in-java/
 public class NativeSolution {
