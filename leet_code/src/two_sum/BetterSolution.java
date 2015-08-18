@@ -15,11 +15,14 @@ public class BetterSolution {
 				int index = map.get(numbers[i]);
 				
 				// increment index since it is not zero-based according to problem requirement
-				result[0] = index + 1; // index from hashmap
-				result[1] = i + 1; // index of current number
+				result[0] = index + 1; // index of number used to store difference in hashmap
+				result[1] = i + 1; // index of current number (difference between target and number used to find difference)
 				
 				break;
 			} else {
+				// store difference between target and current number as a key 
+				// and index of current number as a value
+				// target = numbers[i] + (target - numbers[i])
 				map.put(target - numbers[i], i);
 			}
 		}
