@@ -6,15 +6,17 @@ public class BruteForceSolution {
 		int M = pat.length();
 		int N = txt.length();
 		
-		// check each character in txt
+		// shift starting point of matching in txt
 		for (int i = 0; i <= N - M; i++) {
 			int j;
 			
 			// match each character in pat against each character in txt
 			for (j = 0; j < M; j++) {
-				// check for non-matching character
+				// i + j index represents index of a character in txt 
+				// that is matched against a character at index j in pat
+				// if characters do not match, move onto matching next character in txt
 				if (txt.charAt(i + j) != pat.charAt(j)) {
-					break; // move onto matching next character in txt
+					break;
 				}
 			}
 			
@@ -25,6 +27,7 @@ public class BruteForceSolution {
 				
 		}
 		
-		return N;
+		// not found
+		return -1;
 	}
 }
