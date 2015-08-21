@@ -21,7 +21,20 @@ public class Solution {
 		return reversed.toString();
 	}
 	
+	public static String reverseWordsTwoPasses(String s) {
+		StringBuilder reversed = new StringBuilder();
+		String[] words = s.split(" ");
+		
+		for (int i = words.length - 1; i >= 0; i--) {
+			reversed.append(words[i]);
+			reversed.append(" ");
+		}
+		
+		return reversed.toString();
+	}
+	
 	public static void main(String[] args) {
 		System.out.println(reverseWords("the sky is blue"));
+		System.out.println(reverseWordsTwoPasses("the sky is blue"));
 	}
 }
