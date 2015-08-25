@@ -37,9 +37,9 @@ public class Solution {
 	
 	public static void main(String[] args) {
 		System.out.println(isNumber("1a"));
-//		System.out.println(isNumber("12"));
-//		System.out.println(isNumber("1.2"));
-//		System.out.println(isNumber("1."));
-//		System.out.println(isNumber(".2"));
+		System.out.println(isNumber("12"));
+		System.out.println(isNumber("1.2"));
+		System.out.println(isNumber("1."));
+		System.out.println(isNumber(".2"));
 	}
 }
